@@ -112,7 +112,7 @@ res.sendFile(path.join(__dirname , 'dist/index.html'));
 });
 var port = process.env.PORT || 8080;
 console.log("ohhh god port:",port);
-app.listen(port,()=>
+app.listen(process.env.PORT, '0.0.0.0',()=>
 {
 console.log("server connected",port);
 });
