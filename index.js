@@ -105,7 +105,7 @@ app.get('/signout',(req,res)=>{
         res.send([{'signout':err}]);
     });
 });
-app.get('*',(req,res)=>{
+app.get('/',(req,res)=>{
 res.sendFile(path.join(__dirname , 'dist/index.html'));
 });
 var port = process.env.PORT || 8080;
