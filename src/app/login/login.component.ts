@@ -30,7 +30,7 @@ login(userForm: NgForm) {
     this.progressService.done();
     console.log(res);
   const user = res.json();
-  if (user[0].username) {
+  if (user[0].username !== 'error' ) {
     localStorage.setItem('username', user[0].username);
     localStorage.setItem('id', user[0].uid);
     this.router.navigate(['/dashboard']);
