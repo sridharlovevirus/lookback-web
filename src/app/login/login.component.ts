@@ -40,6 +40,10 @@ login(userForm: NgForm) {
   }    );
   }
   ngOnInit() {
+    if (localStorage.getItem('username') && localStorage.getItem('id')) 
+    {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
 }
