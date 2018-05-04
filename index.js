@@ -3,7 +3,7 @@ var path = require('path');
 const app=express();    
 var fs = require('fs');//Enable Https
 var https = require('https');
-const port=process.env.PORT||3000;
+const port=process.env.PORT||8080;
 app.use(express.static(path.join(__dirname , 'dist')));
 app.use(function (req, res, next) {
 
