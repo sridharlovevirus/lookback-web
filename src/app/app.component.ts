@@ -7,10 +7,11 @@ import { NgProgress } from 'ngx-progressbar';
 })
 export class AppComponent {
 constructor(public progressService: NgProgress) {
-setTimeout((pro: NgProgress) => {
+
+}
+  setTimeout((pro: NgProgress) => {
   this.pro.done();
 }, 3000);
-}
 ngOnInit() {
 	 this.progressService.start();
   }
