@@ -64,8 +64,6 @@ let alldatadesc=[];
 
 });
   
-  app.get('/',(req,res)=>
-{res.send('api working');});
 app.get('/login',(req,res)=>
 {
     username=req.query.username;
