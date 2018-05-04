@@ -111,7 +111,7 @@ app.get('/signout',(req,res)=>{
 app.get('*',(req,res)=>{
 res.sendFile(path.join(__dirname , 'dist/index.html'));
 });
-app.listen(port,()=>
+app.listen(process.env.PORT,()=>
 {
 console.log("server connected");
 });
