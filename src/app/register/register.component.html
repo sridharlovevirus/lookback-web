@@ -1,0 +1,66 @@
+<ng-progress [positionUsing]="'marginLeft'" [minimum]="0.15" [maximum]="1"
+             [speed]="200" [showSpinner]="false"
+             [color]="'orange'" [trickleSpeed]="250" [thick]="true" [ease]="'linear'"
+></ng-progress>
+<div class="limiter">
+    <div class="container-login100" style="background-image: url('./assets/images/bg.png');">
+      <div class="wrap-login100">
+<div class="card text-center">
+    <div class="card-header">
+     <b> Lookback</b>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><B><i>Register</i></B></h5><hr>
+      <form #regForm="ngForm" (ngSubmit)="reg(regForm)" ngNativeValidate>
+        <div class="alert alert-success" *ngIf="isValid">
+        
+          <strong>User added!!</strong> Register Success 
+        </div> 
+        <div class="alert alert-warning" *ngIf="userValid">
+        
+          <strong>{{err}}</strong>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+           
+              <input type="mail" class="form-control" name="username" ngModel  #userName="ngModel" id="mail" aria-describedby="mail" placeholder="Email id" required>
+                </div>
+          <div class="form-group mx-sm-3 mb-2">
+           
+            <input type="password" class="form-control" name="password" ngModel  #userEmail="ngModel" id="pass"  aria-describedby="password" placeholder="Password" required>
+              </div>
+          <div class="form-group mx-sm-3 mb-2">
+ 
+            <input type="password" class="form-control" name="password1" ngModel  #userPass="ngModel" id="password" placeholder="Confirm Password" required>
+          </div>
+         
+          <div class="container-login100-form-btn">
+          <button class="login100-form-btn" type="submit" class="btn btn-primary">Register</button>
+          </div>
+
+        </form>
+        <br>
+        <a routerLink="/"><b>Already have an Account login here!!</b></a>
+    </div>
+    <div class="card-footer text-muted">
+      <h6>@ Copy right 2017-2018</h6>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!--===============================================================================================-->
+	<script src="./assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="./assets/vendor/animsition/js/animsition.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="./assets/vendor/bootstrap/js/popper.js"></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="./assets/vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+    <script src="./assets/vendor/daterangepicker/moment.min.js"></script>
+    <script src="./assets/vendor/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+    <script src="./assets/vendor/countdowntime/countdowntime.js"></script>
+  <!--===============================================================================================-->
+    <script src="./assets/js/main.js"></script>

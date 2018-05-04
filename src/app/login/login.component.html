@@ -1,0 +1,60 @@
+
+<ng-progress [positionUsing]="'marginLeft'" [minimum]="0.15" [maximum]="1"
+[speed]="20000" [showSpinner]="true"
+[color]="'green'" [trickleSpeed]="20" [thick]="false" [ease]="'linear'"
+></ng-progress>
+<div class="limiter">
+<div class="container-login100" style="background-image: url('./assets/images/bg.png');">
+<div class="wrap-login100">
+<div class="card text-center">
+<div class="card-header">
+Lookback
+</div>
+<div class="card-body">
+<h5 class="card-title"><B><i>Way to see Your memories</i></B></h5><hr>
+<form #userForm="ngForm" (ngSubmit)="login(userForm)" ngNativeValidate>
+<div class="alert alert-warning" *ngIf="isValid">
+
+ <strong>Failed!</strong> Error Username/password
+</div>
+<div class="form-group mx-sm-3 mb-2">
+
+<input type="text" name="name" ngModel  #userName="ngModel"  class="form-control" id="mail" aria-describedby="emailHelp" placeholder="Username" required>
+</div>
+<div class="form-group mx-sm-3 mb-2">
+
+<input type="password" name="pass" ngModel  #passWord="ngModel"  class="form-control" id="password" placeholder="Password" required>
+</div>
+<br>
+<div class="container-login100-form-btn">
+<button class="login100-form-btn" type="submit" class="btn btn-primary">Login</button>
+</div>
+
+</form>
+<br>
+<a routerLink="/register"><b>New user register here!!</b></a>
+</div>
+<div class="card-footer text-muted">
+<a routerLink="/forget"><b>Lost your password? click here!</b></a>
+<br><hr>
+<h6>@ Copy right 2017-2018</h6>
+</div>
+</div>
+</div>
+</div>
+</div><!--===============================================================================================-->
+<script src="./assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="./assets/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="./assets/vendor/bootstrap/js/popper.js"></script>
+<script src="./assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="./assets/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="./assets/vendor/daterangepicker/moment.min.js"></script>
+<script src="./assets/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="./assets/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="./assets/js/main.js"></script>
