@@ -3,7 +3,7 @@ var path = require('path');
 const app=express();    
 var fs = require('fs');//Enable Https
 var https = require('https');
-const port=process.env.PORT||8080;
+var port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname , 'dist')));
 app.use(function (req, res, next) {
 
@@ -111,7 +111,8 @@ app.get('/signout',(req,res)=>{
 app.get('*',(req,res)=>{
 res.sendFile(path.join(__dirname , 'dist/index.html'));
 });
-app.listen(process.env.PORT,()=>
+console.log("ohhh god port:",port);
+app.listen(port,()=>
 {
 console.log("server connected");
 });
