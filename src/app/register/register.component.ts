@@ -49,6 +49,9 @@ this.err = 'Confirm password not match';
     }
   }
   ngOnInit() {
+    if (localStorage.getItem('username') && localStorage.getItem('id')) {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
 }
