@@ -7,7 +7,7 @@ import { NgProgress } from 'ngx-progressbar';
 })
 export class AppComponent {
 constructor(public progressService: NgProgress) {
-	
+	this.progressService.done();
 }
 ngOnInit() {
 	 this.progressService.start();
